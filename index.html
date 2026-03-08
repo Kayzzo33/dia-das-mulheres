@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Para as Mulheres da Minha Vida ✨</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Nunito:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Lato:wght@300;400&family=Great+Vibes&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- General Reset --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Hide scrollbars globally */
+        body, html {
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE/Edge */
+            overflow-x: hidden;
+        }
+
+        body::-webkit-scrollbar {
+            display: none; /* Chrome/Safari */
+        }
+
+        body {
+            max-width: 430px;
+            margin: 0 auto;
+            scroll-behavior: smooth;
+            background-color: #000; /* Default dark to prevent flashes */
+        }
+
+        .version-container {
+            display: none;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* --- FAMILY VERSION STYLES --- */
+        #family-version {
+            --pink-main: #FF2D8B;
+            --pink-light: #FFB3D9;
+            --purple-deep: #6B0F6C;
+            --gold: #D4AF37;
+            --pearl: #FFF5F9;
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'Nunito', sans-serif;
+            --font-poetic: 'Dancing Script', cursive;
+            
+            font-family: var(--font-body);
+            background-color: var(--pearl);
+            color: var(--purple-deep);
+        }
+
+        #family-version .hero {
+            height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;
+            position: relative; background: linear-gradient(135deg, var(--pink-main), var(--purple-deep), var(--pink-main));
+            background-size: 200% 200%; animation: gradientBG 10s ease-in-out infinite alternate; text-align: center; padding: 20px;
+        }
+
+        @keyframes gradientBG { 0% { background-position: 0% 0%; } 100% { background-position: 100% 100%; } }
+
+        #family-version .shimmer {
+            background: linear-gradient(90deg, var(--gold) 25%, #fff 50%, var(--gold) 75%);
+            background-size: 200% auto; -webkit-background-clip: text; background-clip: text;
+            -webkit-text-fill-color: transparent; animation: shimmerGold 3s linear infinite;
+        }
+
+        @keyframes shimmerGold { 0% { background-position: -200%; } 100% { background-position: 200%; } }
+
+        #family-version .polaroid-container {
+            position: relative; width: 85%; background: #fff; padding: 12px 12px 40px 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2); transform: rotate(-2deg);
+            animation: float 4s ease-in-out infinite;
+        }
+        #family-version .polaroid-container img {
+            width: 100%; height: 320px; object-fit: cover; display: block;
+            border: 1px solid #eee;
+        }
+
+        @keyframes float { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-15px) rotate(2deg); } }
+
+        #family-version .letter-section { padding: 80px 30px; text-align: center; background: var(--pearl); }
+
+        #family-version .tributes-section { 
+            padding: 60px 0; overflow-x: auto; display: flex; gap: 20px; padding: 0 20px; 
+            scroll-snap-type: x mandatory; scrollbar-width: none; -ms-overflow-style: none;
+            margin-bottom: 100px;
+        }
+        #family-version .tributes-section::-webkit-scrollbar { display: none; }
+
+        #family-version .card { 
+            min-width: 290px; min-height: 420px; border-radius: 24px; padding: 40px 30px; 
+            scroll-snap-align: center; display: flex; flex-direction: column; justify-content: center; 
+            align-items: center; color: #fff; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        #family-version .card-icon { font-size: 48px; margin-bottom: 20px; }
+        #family-version .card-title { font-size: 24px; font-weight: 700; margin-bottom: 15px; font-family: var(--font-display); }
+        #family-version .card-text { font-size: 17px; line-height: 1.6; opacity: 0.95; }
+
+        #family-version .card-1 { background: linear-gradient(135deg, #FF2D8B, #6B0F6C); }
+        #family-version .card-2 { background: linear-gradient(135deg, #D4AF37, #FFB3D9); }
+        #family-version .card-3 { background: linear-gradient(135deg, #6B0F6C, #FF2D8B); }
+
+        #family-version .flowers-section { background: var(--purple-deep); height: 500px; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; overflow: hidden; color: #fff; }
+
+        .scroll-indicator {
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            color: var(--gold); font-size: 0.9rem; margin-bottom: 15px; opacity: 0.8;
+            animation: pulseHint 2s infinite;
+        }
+        @keyframes pulseHint { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
+
+        /* --- GIRLFRIEND VERSION STYLES --- */
+        #girlfriend-version {
+            --bg-night: #0D0010;
+            --rose-crimson: #C2185B;
+            --petal-soft: #F48FB1;
+            --gold-amber: #FFB300;
+            --white-trans: rgba(255,255,255,0.85);
+            --font-romantic-display: 'Cormorant Garamond', serif;
+            --font-light-body: 'Lato', sans-serif;
+            --font-script: 'Great Vibes', cursive;
+
+            background-color: var(--bg-night);
+            color: var(--white-trans);
+            font-family: var(--font-light-body);
+        }
+
+        .intro-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--bg-night); z-index: 1000; display: flex; justify-content: center; align-items: center;
+        }
+
+        .typewriter-text {
+            font-family: var(--font-script); font-size: 2.2rem; color: var(--gold-amber);
+            white-space: nowrap; border-right: 2px solid var(--gold-amber);
+            overflow: hidden; width: 0; 
+            animation: typingGF 3s steps(20, end) forwards, blinkGF 0.8s step-end infinite;
+        }
+
+        @keyframes typingGF { from { width: 0 } to { width: 100% } }
+        @keyframes blinkGF { from, to { border-color: transparent } 50% { border-color: var(--gold-amber) } }
+
+        .gf-hero {
+            height: 100vh; position: relative; overflow: hidden; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; text-align: center; padding: 20px;
+        }
+
+        .heart-svg-container { width: 200px; height: 200px; margin-bottom: 25px; }
+        .heart-path {
+            stroke: var(--rose-crimson); stroke-width: 2; fill: var(--rose-crimson); fill-opacity: 0;
+            stroke-dasharray: 1000; stroke-dashoffset: 1000;
+            animation: drawHeart 4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes drawHeart {
+            0% { stroke-dashoffset: 1000; fill-opacity: 0; }
+            75% { stroke-dashoffset: 0; fill-opacity: 0; }
+            100% { stroke-dashoffset: 0; fill-opacity: 1; }
+        }
+
+        .hero-breathe { animation: breatheGF 3s ease-in-out infinite 4s; }
+        @keyframes breatheGF { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+
+        .gf-hero-title { opacity: 0; animation: fadeInGF 1.2s ease-out 4.5s forwards; }
+        .gf-hero-date { color: var(--gold-amber); letter-spacing: 5px; font-size: 0.85rem; margin-bottom: 10px; }
+        .gf-hero-main { font-family: var(--font-romantic-display); font-size: 2.8rem; color: #fff; margin-bottom: 5px; }
+        .gf-hero-sub { font-family: var(--font-script); font-size: 1.8rem; color: var(--petal-soft); }
+
+        .gf-message { padding: 100px 30px; position: relative; background: linear-gradient(to bottom, var(--bg-night), #1e0025); }
+        .framed-photo {
+            width: 240px; height: 240px; border: 10px solid #fff; margin: 0 auto 50px;
+            transform: rotate(-3deg); box-shadow: 0 20px 40px rgba(0,0,0,0.6); overflow: hidden;
+        }
+        .framed-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+        .gf-text { font-size: 1.1rem; line-height: 1.8; margin-bottom: 30px; }
+        .gf-highlight { font-family: var(--font-script); font-size: 2.5rem; color: var(--rose-crimson); text-shadow: 0 0 15px rgba(194,24,91,0.4); }
+
+        .gf-garden { padding: 20px 20px; position: relative; min-height: 150px; text-align: center; }
+        .mini-heart { position: absolute; opacity: 0; transform: scale(0); transition: all 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .mini-heart.bloom { opacity: 0.9; transform: scale(1); animation: floatSlow 4s ease-in-out infinite; }
+
+        @keyframes floatSlow { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+        .gf-closure { padding: 10px 20px 40px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+        .gf-closure-phrase { font-family: var(--font-romantic-display); font-style: italic; font-size: 22px; color: #fff; margin-bottom: 25px; opacity: 0; animation: fadeInGF 1.5s ease-out forwards; }
+        .gf-separator { width: 0; height: 1px; background: var(--gold-amber); margin-bottom: 25px; animation: growLine 2s ease-in-out forwards 0.5s; }
+        @keyframes growLine { from { width: 0; } to { width: 60px; } }
+        .gf-signature { font-family: var(--font-light-body); font-weight: 300; font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 30px; }
+        .gf-final-heart { font-size: 4.5rem; color: var(--rose-crimson); animation: heartBeatGF 1.5s infinite; margin-bottom: 30px; }
+
+        @keyframes fadeInGF { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        footer { text-align: center; padding: 40px 20px; font-size: 0.8rem; opacity: 0.7; }
+    </style>
+</head>
+<body>
+
+    <!-- ==============================================
+         FAMILY VERSION 
+         ============================================== -->
+    <div id="family-version" class="version-container">
+        <section class="hero">
+            <div id="family-decor" style="position: absolute; top:0; left:0; width:100%; height:100%; pointer-events:none;"></div>
+            <span style="font-size: 0.8rem; color: #D4AF37; letter-spacing: 5px; margin-bottom: 12px; text-transform: uppercase;">8 de Março</span>
+            <h1 class="shimmer" style="font-size: 2.8rem; color: #fff; line-height: 1.1; margin-bottom: 35px;">Dia Internacional<br>da Mulher</h1>
+            <div class="polaroid-container">
+                <img src="./assets/Design sem nome (16).jpg" alt="Família">
+                <span style="font-family: 'Dancing Script'; font-style: italic; font-size: 1.4rem; color: #6B0F6C; margin-top: 15px; display: block;">Para as mulheres que me fizeram quem eu sou.</span>
+            </div>
+        </section>
+
+        <section class="letter-section" id="family-letter">
+            <h2 style="color: #FF2D8B; margin-bottom: 30px; font-size: 2.2rem; font-family:'Playfair Display';">Uma carta pra vocês</h2>
+            <div style="max-width:360px; margin:0 auto; text-align:left; font-size:1.15rem; line-height:1.8;">
+                <p>Crescer rodeado por vocês foi o maior presente que a vida me deu. Cada uma de vocês, do seu jeito, me ensinou algo que eu carrego pra sempre.</p>
+                <br>
+                <p>Aprendi sobre força sem precisar de palavras. Aprendi sobre amor sem precisar pedir. Aprendi sobre lar sem precisar de endereço — porque lar sempre foi onde vocês estavam.</p>
+                <br>
+                <p>Hoje não tenho como pagar tudo que recebi. Mas posso dizer, com todo meu coração:</p>
+            </div>
+            <span style="font-family: 'Dancing Script'; font-size: 2.4rem; color: #D4AF37; margin-top: 40px; display: block;">Obrigado por me construírem.</span>
+        </section>
+
+        <div class="scroll-indicator" id="scroll-hint">
+            <span>Arraste para o lado</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+
+        <section class="tributes-section" id="tributes-container">
+            <div class="card card-1">
+                <div class="card-icon">🌹</div>
+                <h3 class="card-title">Mãe</h3>
+                <p class="card-text">"Você foi o primeiro lugar onde me senti seguro. Tudo que sou começa em você."</p>
+            </div>
+            <div class="card card-2">
+                <div class="card-icon">💛</div>
+                <h3 class="card-title">Tias</h3>
+                <p class="card-text">"Vocês sempre estiveram lá, mesmo quando eu nem percebia o quanto precisava. Sou grato por cada momento."</p>
+            </div>
+            <div class="card card-3">
+                <div class="card-icon">🕊️</div>
+                <h3 class="card-title">Bisavó</h3>
+                <p class="card-text">"Você é a raiz mais funda da nossa família. Carregar um pedaço seu em mim é uma honra."</p>
+            </div>
+        </section>
+
+        <section class="flowers-section">
+            <h2 style="font-family:'Playfair Display'; font-size:2.6rem;">Feliz Dia da Mulher</h2>
+            <div style="font-size:4rem; animation: heartBeatGF 1.5s infinite; color:#FF2D8B; margin-top:20px;">❤️</div>
+        </section>
+
+        <footer style="background:#FF2D8B; color:#fff; padding:60px 20px;">
+            <p style="font-family:'Playfair Display'; font-style:italic; font-size:1.6rem; margin-bottom:20px;">O mundo é mais bonito porque vocês existem.</p>
+            <p style="font-size: 1.1rem;">Com todo meu amor, seu filho, sobrinho e bisneto. 💛</p>
+            <div style="margin-top:40px; font-size:0.8rem; opacity:0.6;">Criado por kayky</div>
+        </footer>
+    </div>
+
+    <!-- ==============================================
+         GIRLFRIEND VERSION 
+         ============================================== -->
+    <div id="girlfriend-version" class="version-container">
+        <div class="intro-overlay" id="gf-intro">
+            <div class="typewriter-text">Isso é pra você...</div>
+        </div>
+
+        <section class="gf-hero" id="gf-hero">
+            <div class="heart-svg-container hero-breathe">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="heart-path" d="M50 85C50 85 10 65 10 35C10 15 30 5 50 25C70 5 90 15 90 35C90 65 50 85 50 85Z" />
+                </svg>
+            </div>
+            <div class="gf-hero-title">
+                <div class="gf-hero-date">8 de Março</div>
+                <h1 class="gf-hero-main">Feliz Dia da Mulher</h1>
+                <div class="gf-hero-sub">Para a minha mulher favorita</div>
+            </div>
+        </section>
+
+        <section class="gf-message" id="gf-message">
+            <div class="framed-photo">
+                <img src="./assets/group.png" alt="Ela">
+            </div>
+            <div class="gf-text">
+                <p>"O Dia das Mulheres existe para lembrar o mundo do que você já sabe fazer naturalmente: ser incrível."</p>
+                <br>
+                <p>"Você não fez parte da minha história desde o começo — mas faz parte do meu presente, e isso tem um valor enorme pra mim."</p>
+                <p>"Há coisas em você que me surpreendem ainda. Sua forma de ver o mundo, de se colocar, de existir do jeito que você existe."</p>
+                <p>"Hoje não é só o dia das mulheres. É o dia de te dizer: fico feliz que você seja a minha."</p>
+            </div>
+            <div class="gf-highlight">Fico feliz que você seja a minha.</div>
+        </section>
+
+        <section class="gf-garden" id="gf-garden">
+            <!-- Corações serão injetados pelo JS -->
+        </section>
+
+        <section class="gf-closure">
+            <p class="gf-closure-phrase">"Você merece ser celebrada todos os dias."</p>
+            <div class="gf-separator"></div>
+            <p class="gf-signature">Com amor, Kayky</p>
+            <div class="gf-final-heart">❤️</div>
+            <div style="font-size:11px; opacity:0.4; margin-top:30px;">Criado por kayky</div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const hash = window.location.hash;
+            const isAmor = params.get('para') === 'voce' || hash === '#amor';
+
+            if (isAmor) {
+                initGirlfriendVersion();
+            } else {
+                initFamilyVersion();
+            }
+        });
+
+        function initFamilyVersion() {
+            document.getElementById('family-version').style.display = 'block';
+            const decor = document.getElementById('family-decor');
+            
+            // Hide scroll hint on scroll
+            const tributes = document.getElementById('tributes-container');
+            const hint = document.getElementById('scroll-hint');
+            if(tributes && hint) {
+                tributes.addEventListener('scroll', () => {
+                    hint.style.opacity = '0';
+                    setTimeout(() => hint.style.display = 'none', 500);
+                }, { once: true });
+            }
+
+            setInterval(() => {
+                const el = document.createElement('div');
+                el.innerHTML = ['❤️', '✨', '⭐', '🌸'][Math.floor(Math.random() * 4)];
+                el.style.cssText = `position:absolute; left:${Math.random()*100}vw; bottom:0; font-size:${12+Math.random()*20}px; color:#D4AF37; opacity:0.6; transition: all 6s linear;`;
+                decor.appendChild(el);
+                setTimeout(() => { 
+                    el.style.transform = `translateY(-100vh) rotate(${Math.random()*360}deg)`; 
+                    el.style.opacity = '0'; 
+                }, 50);
+                setTimeout(() => el.remove(), 6000);
+            }, 600);
+        }
+
+        function initGirlfriendVersion() {
+            document.getElementById('girlfriend-version').style.display = 'block';
+            
+            // Intro fade out
+            setTimeout(() => {
+                const overlay = document.getElementById('gf-intro');
+                if(overlay) {
+                    overlay.style.transition = 'opacity 1.5s ease';
+                    overlay.style.opacity = '0';
+                    setTimeout(() => overlay.remove(), 1500);
+                }
+            }, 4500);
+
+            // Fireflies
+            const hero = document.getElementById('gf-hero');
+            for(let i=0; i<12; i++) {
+                const f = document.createElement('div');
+                f.className = 'firefly';
+                f.style.cssText = `position:absolute; width:4px; height:4px; background:#FFB300; border-radius:50%; box-shadow:0 0 8px #FFB300; left:${Math.random()*100}vw; top:${Math.random()*100}vh; opacity:0;`;
+                hero.appendChild(f);
+                f.animate([
+                    { opacity: 0, transform: 'translate(0,0)' },
+                    { opacity: 0.8, transform: `translate(${(Math.random()-0.5)*100}px, ${(Math.random()-0.5)*100}px)` },
+                    { opacity: 0, transform: `translate(${(Math.random()-0.5)*200}px, ${(Math.random()-0.5)*200}px)` }
+                ], { duration: 4000 + Math.random()*3000, iterations: Infinity });
+            }
+
+            // Falling Petals
+            const messageSec = document.getElementById('gf-message');
+            setInterval(() => {
+                const p = document.createElement('div');
+                p.style.cssText = `position:absolute; top:-50px; left:${Math.random()*100}vw; font-size:${15+Math.random()*20}px; color:#C2185B; pointer-events:none; z-index:1;`;
+                p.innerHTML = '🌸';
+                messageSec.appendChild(p);
+                const anim = p.animate([
+                    { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
+                    { transform: `translateY(120vh) rotate(${360+Math.random()*360}deg)`, opacity: 0 }
+                ], { duration: 5000 + Math.random()*3000 });
+                anim.onfinish = () => p.remove();
+            }, 400);
+
+            // Garden Hearts
+            const garden = document.getElementById('gf-garden');
+            const colors = ['#C2185B', '#F48FB1']; // Removido amarelo
+            for(let i=0; i<4; i++) {
+                const r = document.createElement('div');
+                r.className = 'mini-heart';
+                const size = 25 + Math.random() * 25;
+                r.style.cssText = `left:${15 + Math.random()*70}vw; top:${Math.random()*100}%;`;
+                r.innerHTML = `<svg width="${size}" height="${size}" viewBox="0 0 100 100"><path fill="${colors[i%2]}" d="M50 85C50 85 10 65 10 35C10 15 30 5 50 25C70 5 90 15 90 35C90 65 50 85 50 85Z"/></svg>`;
+                garden.appendChild(r);
+            }
+
+            const obs = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if(e.isIntersecting) {
+                        const hearts = e.target.querySelectorAll('.mini-heart');
+                        hearts.forEach((h, i) => setTimeout(() => h.classList.add('bloom'), i * 300));
+                    }
+                });
+            }, {threshold: 0.3});
+            obs.observe(garden);
+        }
+    </script>
+</body>
+</html>
